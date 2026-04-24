@@ -1,0 +1,133 @@
+{
+  // ============================================================
+  //  MI SETUP DE VS CODE — versión para alumnos
+  //  Pégalo en: Cmd/Ctrl + Shift + P → "Preferences: Open User Settings (JSON)"
+  //  Requiere instalar: tema, iconos y fuente (ver README.md)
+  // ============================================================
+
+  // === TEMA Y APARIENCIA ===
+  // Tema "Darker+" + iconos "Symbols" + paleta plana #151515.
+  // Todo queda del mismo color (editor, sidebar, panel, terminal, status bar)
+  // para un look minimalista sin separaciones visuales marcadas.
+  "workbench.colorTheme": "Darker+",
+  "workbench.iconTheme": "symbols",
+  "workbench.startupEditor": "none",
+  "workbench.colorCustomizations": {
+    "[Darker+]": {
+      "editor.background": "#151515",
+      "input.background": "#101010",
+      "sideBar.background": "#151515",
+      "activityBar.background": "#151515",
+      "editorGroupHeader.tabsBackground": "#202020",
+      "tab.activeBackground": "#151515",
+      "tab.unfocusedActiveBackground": "#151515",
+      "tab.inactiveBackground": "#151515",
+      "panel.background": "#151515",
+      "terminal.background": "#151515",
+      "statusBar.background": "#151515",
+      "statusBar.noFolderBackground": "#151515",
+      "statusBar.debuggingBackground": "#151515",
+      "titleBar.activeBackground": "#151515",
+      "titleBar.inactiveBackground": "#151515",
+      "panelSectionHeader.background": "#202020",
+      "panelSectionHeader.border": "#202020",
+      "sideBar.border": "#303030",
+      "activityBar.border": "#303030",
+      "editorGroup.border": "#303030",
+      "editorGroupHeader.tabsBorder": "#303030",
+      "panel.border": "#303030",
+      "statusBar.border": "#303030",
+      "titleBar.border": "#303030",
+      "tab.border": "#303030"
+    }
+  },
+
+  // === EDITOR ===
+  "editor.fontSize": 15,
+  "editor.cursorSmoothCaretAnimation": "on",
+  "editor.cursorBlinking": "expand",
+  "editor.suggest.showStatusBar": true,
+  "editor.minimap.enabled": true,
+  "editor.fontVariations": false,
+  // Mantiene visible el nombre de la función/clase al scrollear (contexto al leer código que escribió Claude)
+  "editor.stickyScroll.enabled": true,
+  // Las líneas largas se envuelven, sin scroll horizontal
+  "editor.wordWrap": "on",
+  "files.autoSave": "afterDelay",
+  "files.trimTrailingWhitespace": true,
+  "files.insertFinalNewline": true,
+  "explorer.confirmDelete": false,
+  "explorer.confirmDragAndDrop": false,
+  // El archivo actual se resalta automático en el explorer
+  "explorer.autoReveal": true,
+
+  // === TERMINAL ===
+  // Fuentes preinstaladas en todos los sistemas (no requiere descargar nada):
+  //   Windows → Consolas    macOS → Menlo
+  "terminal.integrated.fontSize": 14,
+  "terminal.integrated.fontFamily": "Consolas, Menlo, monospace",
+  "terminal.integrated.enableMultiLinePasteWarning": "never",
+  "terminal.integrated.cursorBlinking": true,
+  "terminal.integrated.defaultProfile.osx": "zsh",
+  "terminal.integrated.gpuAcceleration": "off",
+  "terminal.integrated.customGlyphs": false,
+  // Seleccionar texto en la terminal lo copia automático al clipboard
+  // (útil para pegar errores a Claude sin tener que usar Cmd/Ctrl+C)
+  "terminal.integrated.copyOnSelection": true,
+  // Más historial para scrollear a errores pasados
+  "terminal.integrated.scrollback": 10000,
+  // Mantiene el prompt visible al scrollear en la terminal
+  "terminal.integrated.stickyScroll.enabled": true,
+
+  // === CLAUDE CODE ===
+  // Modo bypass: Claude opera sin pedir permisos en cada edit.
+  // Así fluye la metodología de vibecoding sin interrupciones constantes.
+  "claudeCode.preferredLocation": "panel",
+  "claudeCode.allowDangerouslySkipPermissions": true,
+  "claudeCode.initialPermissionMode": "bypassPermissions",
+  "claudeCode.respectGitIgnore": false,
+  "claudeCode.selectedModel": "default",
+  "accessibility.signals.lineHasInlineSuggestion": {
+    "sound": "off"
+  },
+  "accessibility.signals.nextEditSuggestion": {
+    "announcement": "off",
+    "sound": "off"
+  },
+
+  // === COPILOT (solo autocomplete inline, sin chat) ===
+  "github.copilot.chat.enabled": false,
+  "github.copilot.editor.enableAutoCompletions": true,
+
+  // === DESACTIVAR AGENTES NATIVOS DE VS CODE ===
+  // Para que Claude Code sea el único asistente y no haya choque de atajos.
+  "chat.agent.enabled": false,
+  "chat.agentsControl.enabled": false,
+
+  // === PYTHON ===
+  "python.languageServer": "Default",
+  "python.terminal.activateEnvironment": false,
+
+  // === OTROS ===
+  "json.schemaDownload.enable": true,
+  "security.workspace.trust.untrustedFiles": "open",
+  "inlineChat.finishOnType": true,
+  "extensions.ignoreRecommendations": true,
+
+  // Flow de vibecoding: los archivos se abren como pestañas normales, no en "preview"
+  // (así no se reemplazan solas cuando Claude abre otro archivo)
+  "workbench.editor.enablePreview": false,
+  "workbench.editor.enablePreviewFromQuickOpen": false,
+  // Diffs lado a lado para ver claramente qué cambió Claude
+  "diffEditor.renderSideBySide": true,
+  "scm.defaultViewMode": "tree",
+
+  // Git fluido
+  "git.confirmSync": false,
+  "git.autofetch": true,
+  "git.enableSmartCommit": true,
+
+  // Activity bar compacta y arriba → layout horizontal minimalista
+  "workbench.activityBar.compact": true,
+  "workbench.activityBar.location": "top"
+}

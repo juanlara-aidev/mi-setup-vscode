@@ -1,0 +1,52 @@
+================================================================
+  MI SETUP DE VS CODE — Instrucciones de instalación
+================================================================
+
+PASO 1. INSTALAR LAS EXTENSIONES
+--------------------------------------------------------------
+En VS Code abre la pestaña de extensiones (Cmd+Shift+X en Mac /
+Ctrl+Shift+X en Windows) y busca e instala:
+
+  - Darker+                (autor: borekb)
+  - Symbols                (autor: Miguel Solorio)
+  - Claude Code            (autor: Anthropic)
+  - GitHub Copilot
+  - GitHub Copilot Chat
+
+
+PASO 2. REEMPLAZAR TU SETTINGS.JSON CON UN COMANDO
+--------------------------------------------------------------
+Abre una terminal DENTRO de esta carpeta:
+
+  - Mac:     Click derecho sobre la carpeta en Finder →
+             "Nueva Terminal en la carpeta"
+             (o desde VS Code: Terminal → Nueva Terminal)
+
+  - Windows: Shift + Click derecho dentro de la carpeta →
+             "Abrir ventana de PowerShell aquí"
+
+Luego copia y pega el comando según tu sistema:
+
+  ► macOS (Terminal o iTerm):
+
+    cp settings.json "$HOME/Library/Application Support/Code/User/settings.json"
+
+
+  ► Windows (PowerShell):
+
+    Copy-Item settings.json "$env:APPDATA\Code\User\settings.json" -Force
+
+
+PASO 3. RECARGAR LA VENTANA
+--------------------------------------------------------------
+Después de ejecutar el comando, recarga la ventana de VS Code:
+
+  Cmd/Ctrl + Shift + P → escribe "Reload Window" → Enter
+
+Si el tema no se aplica solo:
+  Cmd/Ctrl + Shift + P → escribe "Color Theme" → elige "Darker+"
+
+
+================================================================
+  LISTO. Ya tienes el mismo setup que yo.
+================================================================
