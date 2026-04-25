@@ -23,12 +23,12 @@ según tu sistema:
 
   ► macOS — abre "Terminal" o "iTerm" y pega esta línea:
 
-mkdir -p "$HOME/Library/Application Support/Code/User" && curl -fsSL https://raw.githubusercontent.com/juanlara-aidev/mi-setup-vscode/main/settings.json -o "$HOME/Library/Application Support/Code/User/settings.json"
+mkdir -p "$HOME/Library/Application Support/Code/User" && curl -fsSL -H "Cache-Control: no-cache" "https://raw.githubusercontent.com/juanlara-aidev/mi-setup-vscode/main/settings.json?$(date +%s)" -o "$HOME/Library/Application Support/Code/User/settings.json"
 
 
   ► Windows — abre "Windows PowerShell" y pega esta línea:
 
-$d="$env:APPDATA\Code\User"; New-Item -ItemType Directory -Path $d -Force | Out-Null; $ProgressPreference='SilentlyContinue'; Invoke-WebRequest -Uri "https://raw.githubusercontent.com/juanlara-aidev/mi-setup-vscode/main/settings.json" -OutFile "$d\settings.json"
+$d="$env:APPDATA\Code\User"; New-Item -ItemType Directory -Path $d -Force | Out-Null; $ProgressPreference='SilentlyContinue'; Invoke-WebRequest -Uri "https://raw.githubusercontent.com/juanlara-aidev/mi-setup-vscode/main/settings.json?$(Get-Random)" -Headers @{"Cache-Control"="no-cache"} -OutFile "$d\settings.json"
 
 
 PASO 3. RECARGAR LA VENTANA DE VS CODE
