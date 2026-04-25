@@ -1,8 +1,7 @@
 {
   // ============================================================
-  //  MI SETUP DE VS CODE — versión para alumnos
-  //  Pégalo en: Cmd/Ctrl + Shift + P → "Preferences: Open User Settings (JSON)"
-  //  Requiere instalar: tema, iconos y fuente (ver README.md)
+  //  MI SETUP DE VS CODE — Plantilla minimalista para vibecoding
+  //  Ver INSTRUCCIONES.txt para aplicarlo en tu VS Code.
   // ============================================================
 
   // === TEMA Y APARIENCIA ===

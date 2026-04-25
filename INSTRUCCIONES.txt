@@ -14,39 +14,31 @@ Ctrl+Shift+X en Windows) y busca e instala:
   - GitHub Copilot Chat
 
 
-PASO 2. REEMPLAZAR TU SETTINGS.JSON CON UN COMANDO
+PASO 2. APLICAR LA CONFIGURACIÓN CON UN COMANDO
 --------------------------------------------------------------
-Abre una terminal DENTRO de esta carpeta:
-
-  - Mac:     Click derecho sobre la carpeta en Finder →
-             "Nueva Terminal en la carpeta"
-             (o desde VS Code: Terminal → Nueva Terminal)
-
-  - Windows: Shift + Click derecho dentro de la carpeta →
-             "Abrir ventana de PowerShell aquí"
-
-Luego copia y pega el comando según tu sistema:
-
-  ► macOS (Terminal o iTerm):
-
-    cp settings.json "$HOME/Library/Application Support/Code/User/settings.json"
+Abre tu terminal (NO importa en qué carpeta estés, funciona
+desde cualquier ubicación). Copia y pega el comando completo
+según tu sistema:
 
 
-  ► Windows (PowerShell):
+  ► macOS — abre "Terminal" o "iTerm" y pega esta línea:
 
-    Copy-Item settings.json "$env:APPDATA\Code\User\settings.json" -Force
+mkdir -p "$HOME/Library/Application Support/Code/User" && curl -fsSL https://raw.githubusercontent.com/juanlara-aidev/mi-setup-vscode/develop/settings.json -o "$HOME/Library/Application Support/Code/User/settings.json"
 
 
-PASO 3. RECARGAR LA VENTANA
+  ► Windows — abre "Windows PowerShell" y pega esta línea:
+
+$d="$env:APPDATA\Code\User"; New-Item -ItemType Directory -Path $d -Force | Out-Null; $ProgressPreference='SilentlyContinue'; Invoke-WebRequest -Uri "https://raw.githubusercontent.com/juanlara-aidev/mi-setup-vscode/develop/settings.json" -OutFile "$d\settings.json"
+
+
+PASO 3. RECARGAR LA VENTANA DE VS CODE
 --------------------------------------------------------------
-Después de ejecutar el comando, recarga la ventana de VS Code:
-
-  Cmd/Ctrl + Shift + P → escribe "Reload Window" → Enter
+Cmd/Ctrl + Shift + P → escribe "Reload Window" → Enter
 
 Si el tema no se aplica solo:
   Cmd/Ctrl + Shift + P → escribe "Color Theme" → elige "Darker+"
 
 
 ================================================================
-  LISTO. Ya tienes el mismo setup que yo.
+  LISTO. Ya tienes el mismo setup.
 ================================================================
